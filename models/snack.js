@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const snackSchema = new Schema({
     name: {type: String, required: true},
-    type: String
+    type: {type: String, required: true}
 }, {
     timestamps: true
 });
