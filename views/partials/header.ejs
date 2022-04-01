@@ -8,16 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <h3><%= title %></h3>
     <div class="container">
             <nav class="row">
-                <h3><%= title %></h3>
-                <button href="/" class="col-sm-5">HOME</button>
-                <button class="col-sm-5">Snacks</button>
-                <button class="col-sm-10">Add Snacks</button>
+                <a href="/" class="col-sm-5">HOME</a>
+                <a href ="/snacks" class="col-sm-5">Snacks</a>
+                <a href="/snacks/new" class="col-sm-10">Add Snacks</a>
                 <% if (user) { %>
-                    <a href="/logout">LOG OUT</a>
+                    <a href="/logout" class="col-sm-12">LOG OUT</a>
                     <% } else { %>
-                    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+                    <a href="/auth/google" class="login col-sm-14">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
                     <% } %>
             </nav> 
     </div>
