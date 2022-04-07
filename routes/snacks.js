@@ -5,10 +5,10 @@ const isLoggedIn = require('../config/auth')
 
 router.get('/', snacksCtrl.index)
 router.get('/new', snacksCtrl.new)
-// router.get('/:id', isLoggedIn, snacksCtrl.show)
-// router.post('/', isLoggedIn, snacksCtrl.create)
-// router.get('/:id/edit', isLoggedIn, snacksCtrl.edit);
-// router.put('/:id', isLoggedIn, snacksCtrl.update);
+router.get('/:id', snacksCtrl.show)
+router.post('/', snacksCtrl.create)
+router.get('/:id/edit', snacksCtrl.edit);
+router.put('/:id', snacksCtrl.update);
 
 
 module.exports = router;
