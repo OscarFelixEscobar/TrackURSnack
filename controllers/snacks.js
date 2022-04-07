@@ -11,6 +11,7 @@ module.exports = {
 
 function index(req, res) {
     Snack.find({}, function(err, snack) {
+        console.log(snack)
         res.render('snacks/index', {snack})
     })
 }
@@ -40,6 +41,7 @@ function create(req, res) {
     const snack = new Snack (req.body)
     snack.save(function(err) {
         if (err) {
+            console.log(err)
             return res.render('snacks/new')
         } 
         else {
@@ -50,7 +52,9 @@ function create(req, res) {
 
 function show(req, res) {
     Snack.findById(req.params.id, function(err, snack) {
-        res.render('snacks/show', {title: 'snack'})
+        console.log(snack)
+        console.log(err)
+        res.render('snacks/show', {snack})
     })
 }
 
