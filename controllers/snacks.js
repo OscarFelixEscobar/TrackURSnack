@@ -4,6 +4,7 @@ module.exports = {
     index,
     new: newSnack,
     create,
+    delete: deleteSnack,
     show,
     edit,
     update
@@ -38,7 +39,8 @@ function newSnack(req, res) {
 // }
 
 function create(req, res) {
-    const snack = new Snack (req.body)
+    const snack = new Snack(req.body)
+    console.log(req.body)
     snack.save(function(err) {
         if (err) {
             console.log(err)
@@ -69,4 +71,9 @@ function update(req, res) {
         return res.redirect ('/snacks/edit')
         res.redirect(`/snacks/${snack._id}`)
     });
+}
+
+function deleteSnack(req, res) {
+    Snack.deleteOne(req.params.id);
+    res.redirect('/snacks');
 }
