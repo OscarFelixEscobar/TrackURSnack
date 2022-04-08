@@ -7,7 +7,7 @@ router.get('/', snacksCtrl.index)
 router.get('/new', snacksCtrl.new)
 router.get('/:id', snacksCtrl.show)
 router.post('/', snacksCtrl.create)
-router.delete('/', snacksCtrl.delete)
+router.delete('/:id', snacksCtrl.delete)
 router.get('/:id/edit', snacksCtrl.edit);
 router.put('/:id', snacksCtrl.update);
 

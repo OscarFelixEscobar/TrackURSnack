@@ -74,6 +74,8 @@ function update(req, res) {
 }
 
 function deleteSnack(req, res) {
-    Snack.deleteOne(req.params.id);
-    res.redirect('/snacks');
+    Snack.findByIdAndDelete(req.params.id, function(err){
+        if(err) return res.redirect ('/snacks')
+        res.redirect('/snacks');
+    });
 }
