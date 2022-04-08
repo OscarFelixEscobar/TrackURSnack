@@ -1,6 +1,7 @@
-/* body {
+ body, table, container {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: orange;
 }
 
 a {
@@ -9,7 +10,7 @@ a {
 
 .move {
   margin: 10px, 10px, 10px, 10px;
-} */
+} 
 
 .firstbanner {
   background-color:chocolate !important;

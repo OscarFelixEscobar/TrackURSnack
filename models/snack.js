@@ -16,7 +16,8 @@ const commentSchema = new Schema({
 const snackSchema = new Schema({
     name: {type: String, required: true},
     kind: {type: String, required: true},
-    rating: {type: Number, min: 1, max: 10, required: true}
+    rating: {type: Number, min: 1, max: 10, required: true},
+    comments: [commentSchema]
 }, {
     timestamps: true
 });
