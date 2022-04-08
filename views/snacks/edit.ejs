@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="/stylesheets/style.css"/>
 </head>
 <body>
-    <h1 class="firstbanner">TrackURSnack</h1>
-    <div class="container" "firstbanner">
-            <nav class="row">
-                <a href="/" class="col-sm-5">HOME</a>
-                <a href ="/snacks" class="col-sm-5">Snacks</a>
-                <a href="/snacks/new" class="col-sm-10">Add Snacks</a>
-            </nav> 
+    <div class="container firstbanner">
+        <h1>TrackURSnack</h1>
+        <nav class="row">
+            <a href="/" class="col-sm-5">HOME</a>
+            <a href ="/snacks" class="col-sm-5">Snacks</a>
+            <a href="/snacks/new" class="col-sm-10">Add Snacks</a>
+        </nav> 
     </div>
     <h1>Edit:</h1>
     <form action="/snacks/<%= snack.id %>?_method=PUT" method="POST">

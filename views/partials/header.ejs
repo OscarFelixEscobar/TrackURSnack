@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TrackURSnack</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css"/>
 </head>
 <body>
-    <h3><%= title %></h3>
-    <div class="container">
-            <nav class="row">
-                <a href="/" class="col-sm-5">HOME</a>
-                <a href ="/snacks" class="col-sm-5">Snacks</a>
-                <a href="/snacks/new" class="col-sm-10">Add Snacks</a>
+    <div class="container firstbanner">
+        <h1><%= title %></h1>
+        <nav class="row">
+            <a href="/" class="col-sm-5">HOME</a>
+            <a href ="/snacks" class="col-sm-5">Snacks</a>
+            <a href="/snacks/new" class="col-sm-10">Add Snacks</a>
                 <% if (user) { %>
                     <a href="/logout" class="col-sm-12">LOG OUT</a>
                     <% } else { %>
-                    <a href="/auth/google" class="login col-sm-14">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+                    <a href="/auth/google" class="login col-sm-14">LOG IN&nbsp;</a>
                     <% } %>
             </nav> 
     </div>
