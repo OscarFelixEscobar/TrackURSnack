@@ -5,7 +5,7 @@ module.exports = {
 }
 
 function create(req, res) {
-    Snack.findById(req.params.id, function(err, snack) {
+    Snack.findById(req.params._id, function(err, snack) {
       req.body.user = req.user._id;
       req.body.userName = req.user.name;
       req.body.userAvatar = req.user.avatar;
